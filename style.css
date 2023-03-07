@@ -13,9 +13,7 @@ img{
     justify-content: space-between;
     width: 390px;
     max-width: 50%;
-    height: 548px;
     background-color: #1c1c1c;
-    margin: 80px auto;
     box-shadow: inset 0px 62px 21px -7px rgba(0,0,0,0.7), inset 0px -64px 24px -7px rgba(0,0,0,0.7);
 }
 .text{
