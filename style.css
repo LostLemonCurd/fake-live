@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #242325;
+}
+img{
+    display: block;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 390px;
+    max-width: 50%;
+    height: 548px;
+    background-color: #1c1c1c;
+    margin: 80px auto;
+    box-shadow: inset 0px 62px 21px -7px rgba(0,0,0,0.7), inset 0px -64px 24px -7px rgba(0,0,0,0.7);
+}
+.text{
+    font-size: 12px;
+}
+.bold{
+    font-weight: 500;
+}
+
+/* TOP-BAR */
+
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 18px;
+}
+.user{
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.user-img{
+    height: 34px;
+    width: 34px;
+    margin-right: 8px;
+}
+.live-status{
+    display: flex;
+    align-items: center;
+}
+.is-live{
+    background: linear-gradient(148deg, rgba(186,38,125,1) 17%, rgba(198,42,88,1) 45%, rgba(204,43,72,1) 61%);   
+    padding: 10px; 
+    color: #fff;
+    border-radius: 4px;
+}
+.viewer-count{
+    display: flex;
+    margin: 0 8px;
+    color: #FFFFFF;
+    background: #080808;
+    padding: 10px;
+    border-radius: 4px;
+}
+.viewer-count img{
+    height: 14px;
+    width: 20px;
+    margin-right: 8px;
+}
+.cross{
+    color: #fff;
+}
+
+
+/* BOTTOM SECTION */
+.bottom-section{
+    margin: 0 18px;
+}
+
+/* COMMENTS */
+.comment-section{
+    margin: 0px;
+}
+.comments{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.comments img{
+    height: 34px;
+    width: 34px;
+}
+.com-info{
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    margin-left: 12px;
+}
+
+
+/* BOTTOM-BAR */
+.bottom-bar{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px;
+}
+.inputwrapper{
+    position: relative;
+    width: 100%;
+}
+.inputwrapper input{
+    width: 80%;
+    color: #fff;
+    background-color: transparent;  
+    padding: 12px;
+    border: 1px solid #d4d4d4;
+    border-radius: 40px;
+}
+.inputwrapper input::placeholder{
+    color: #d4d4d4;
+}
+.inputwrapper::after{
+    content: '...';
+    font-size: 28px;
+    color: #fff;
+    position: absolute;
+    right: 16%;
+    bottom: 38.5%;
+}
