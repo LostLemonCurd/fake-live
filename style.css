@@ -8,6 +8,7 @@ img{
     display: block;
 }
 .container{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -23,6 +24,12 @@ img{
 .bold{
     font-weight: 500;
 }
+
+/* VIDEO-BACKGROUND */
+.video-background{
+    position: absolute;
+}
+
 
 /* TOP-BAR */
 
