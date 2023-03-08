@@ -127,6 +127,12 @@ img{
     bottom: 38.5%;
 }
 
+@media screen and (max-width: 400px) {
+    .container{
+        width: 100%;
+    }
+}
+
 @media screen and (min-width: 1000px) {
     .inputwrapper::after{
         right: 18%;
