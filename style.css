@@ -76,7 +76,7 @@ img{
 
 /* COMMENTS */
 .comment-section{
-    margin: 0px;
+    max-height: 210px;
 }
 .mask{
     -webkit-mask-image: linear-gradient(transparent, black);
