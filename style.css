@@ -12,7 +12,7 @@ img{
     flex-direction: column;
     justify-content: space-between;
     min-width: 370px;
-    max-width: 50%;
+    margin: auto;
     background-color: #1c1c1c;
     box-shadow: inset 0px 62px 21px -7px rgba(0,0,0,0.7), inset 0px -64px 24px -7px rgba(0,0,0,0.7);
 }
@@ -127,20 +127,20 @@ img{
     bottom: 38.5%;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .container{
         height: 100vh;
         width: 100%;
-    }
-}
-@media screen and (min-width: 500px) {
-    .container{
-        margin: 80px auto;
+        margin: auto;
     }
 }
 @media screen and (min-width: 1000px) {
     .inputwrapper::after{
         right: 18%;
         bottom: 38.5%;
+    }
+    .container{
+        max-width: 50%;
+        margin: 80px auto;
     }
 }
