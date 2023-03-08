@@ -75,11 +75,13 @@ img{
 }
 
 /* COMMENTS */
-.comment-section{
-    max-height: 74%;
-}
+
 .mask{
     -webkit-mask-image: linear-gradient(transparent, black);
+}
+.comment-section{
+    max-height: 200px;
+    overflow-y: scroll;
 }
 .comments{
     display: flex;
