@@ -15,7 +15,6 @@ img{
     min-width: 370px;
     margin: auto;
     height: 100vh;
-    background-color: #1c1c1c;
     box-shadow: inset 0px 62px 21px -7px rgba(0,0,0,0.7), inset 0px -64px 24px -7px rgba(0,0,0,0.7);
 }
 .text{
@@ -25,9 +24,13 @@ img{
     font-weight: 500;
 }
 
-/* VIDEO-BACKGROUND */
-.video-background{
+/* VIDEO-CAMERA */
+.videoCamera{
     position: absolute;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
 }
 
 
@@ -37,6 +40,8 @@ img{
     display: flex;
     justify-content: space-between;
     margin: 12px 18px;
+    position: relative;
+    z-index: 2;
 }
 .user{
     display: flex;
@@ -79,6 +84,8 @@ img{
 /* BOTTOM SECTION */
 .bottom-section{
     margin: 0 18px;
+    position: relative;
+    z-index: 2;
 }
 
 /* COMMENTS */
