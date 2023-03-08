@@ -80,7 +80,7 @@ img{
     -webkit-mask-image: linear-gradient(transparent, black);
 }
 .comment-section{
-    max-height: 200px;
+    max-height: 35vh;
     overflow-y: scroll;
 }
 .comments{
