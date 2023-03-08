@@ -11,7 +11,7 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 390px;
+    min-width: 370px;
     max-width: 50%;
     height: 548px;
     background-color: #1c1c1c;
@@ -127,4 +127,11 @@ img{
     position: absolute;
     right: 16%;
     bottom: 38.5%;
+}
+
+@media screen and (min-width: 1000px) {
+    .inputwrapper::after{
+        right: 18%;
+        bottom: 38.5%;
+    }
 }
