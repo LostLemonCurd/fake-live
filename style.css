@@ -95,9 +95,12 @@ img{
 /* COMMENTS */
 
 .mask{
+    mask-image: linear-gradient(transparent, black);
     -webkit-mask-image: linear-gradient(transparent, black);
 }
 .comment-section{
+    display: flex;
+    flex-direction: column;
     max-height: 35vh;
     overflow-y: scroll;
 }
@@ -109,6 +112,7 @@ img{
 .comments img{
     height: 34px;
     width: 34px;
+    border-radius: 200px;
 }
 .com-info{
     display: flex;
