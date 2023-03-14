@@ -38,42 +38,51 @@ document.addEventListener("touchstart", (event) => {
 });
 
 fetch('https://dummyjson.com/comments')
-.then(res => res.json())
-.then(json => {
+  .then(res => res.json())
+  .then(json => {
 
     function generateComment(json) {
-        // Select the container where the comment will be added
-        const commentContainer = document.querySelector(".comment-section");
-        console.log(commentContainer);
-            const comInfo = document.createElement("div");
-            comInfo.classList.add('com-info');
+      // Select the container where the comment will be added
+      const commentContainer = document.querySelector(".comment-section");
+      console.log(commentContainer);
 
-            const userImages = document.createElement("img");
-            userImages.setAttribute('src', 'https://xsgames.co/randomusers/avatar.php?g=male');
+      const comInfo = document.createElement("div");
+      comInfo.classList.add('com-info');
 
-            const userNames = document.createElement("span");
-            const userComments = document.createElement("span");
+      const userImages = document.createElement("img");
+      fetch('https://randomuser.me/api/')
+      .then(response => response.json())
+      .then(data => {
+        const photo = data.results[0].picture.large;
+        userImages.setAttribute('src', photo);
+    })
+      .catch(error => console.error(error));
 
-            userNames.innerHTML = json.comments[i].user.username;
-            userComments.innerHTML = json.comments[i].body;
+      const userNames = document.createElement("span");
+      const userComments = document.createElement("span");
 
-            comInfo.appendChild(userNames);
-            comInfo.appendChild(userComments);
+      userNames.innerHTML = json.comments[i].user.username;
+      userComments.innerHTML = json.comments[i].body;
 
-            const comments = document.createElement("div");
-            comments.classList.add("comments");
-            comments.appendChild(userImages);
-            comments.appendChild(comInfo);
+      comInfo.appendChild(userNames);
+      comInfo.appendChild(userComments);
 
-            commentContainer.appendChild(comments);
+      const comments = document.createElement("div");
+      comments.classList.add("comments");
+      comments.appendChild(userImages);
+      comments.appendChild(comInfo);
 
-        i++;   
+      commentContainer.appendChild(comments);
 
+      comments.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
 
-        // Set a timer to call the function again every 2 seconds
-        setTimeout(() => generateComment(json), 2000);
-    }      
+      i++;
+
+      // Set a timer to call the function again every 2 seconds
+      setTimeout(() => generateComment(json), 2000);
+    }
+
     let i = 0;
 
     generateComment(json);
-});
+  });
